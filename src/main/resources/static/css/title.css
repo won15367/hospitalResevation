@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+span.title01 {
+	font-size: 40px;
+	color: #424d37;
+}
+
+table.maintable {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#E4E4D0;
+	border: 2px solid black;
+	border-radius:20px;
+}
+
+td.con_text {
+	font-size:16px;
+	font:malgun;
+	text-align:right;
+}
+
+td.ok_text {
+	font-size:18px;
+	font:malgun;
+	text-align:left;
+}

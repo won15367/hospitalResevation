@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+span.title01 {
+	font-size: 40px;
+	color: #424d37;
+}
+
+table.infomain {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#E4E4D0;
+	border: 2px solid black;
+	border-radius:20px;
+	width: 60%;
+}
+
+table.infotable {
+	background-color:#E4E4D0;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+th.mname{
+	font-family: malgun;
+	font-size: 18px;
+	border-bottom:2px solid #94A684;
+	height:30px;
+}
+
+th.btitle {
+	font-family: malgun;
+	font-size: 16px;
+	font-weight: bolder;
+	background-color:#AEC3AE ;
+	color: black;
+	border: 1px solid black;
+	text-align: center;
+	height:30px;
+}
+
+td.bcontent {
+	font-family: malgun;
+	font-size: 16px;
+	color: black;
+	border: 1px solid black;
+	
+}

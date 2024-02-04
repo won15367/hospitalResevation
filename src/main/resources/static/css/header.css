@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+tr.headerline {
+	background-color: #AEC3AE;
+	height: 50px;	
+}
+
+span.menutext {
+	font-size: 18px;
+	font-family: Impact;
+	color: black;
+	font-weight: bold;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}

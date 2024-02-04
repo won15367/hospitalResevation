@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.won15367.reserve.dao.ReserveDao">
+
+	<select id="reserveCheckDao" resultType="int">
+		SELECT COUNT(*) FROM hos_reserve WHERE rdate=#{param1} AND rtime=#{param2}
+	</select>
+	
+	<insert id="reserveDao">
+		INSERT INTO hos_reserve (rnum, rid, rname, rdate, rtime, rcontent) VALUES (reserve_seq.nextval, #{param1}, #{param2}, #{param3}, #{param4}, #{param5})
+	</insert>
+	
+	<select id="memresListDao" resultType="com.won15367.reserve.dto.ReserveDto">
+		SELECT * FROM hos_reserve WHERE rid=#{param1} ORDER BY rdate, rtime
+	</select>
+	
+	<select id="reserveViewDao" resultType="com.won15367.reserve.dto.ReserveDto">
+		SELECT * FROM hos_reserve WHERE rnum=#{param1}	
+	</select>
+	
+	<delete id="reserveDeleteDao">
+		DELETE FROM hos_reserve WHERE rnum=#{param1}
+	</delete>
+	
+	<select id="reserveListDao" resultType="com.won15367.reserve.dto.ReserveDto">
+		SELECT * FROM hos_reserve ORDER BY rdate, rtime
+	</select>
+	
+</mapper>

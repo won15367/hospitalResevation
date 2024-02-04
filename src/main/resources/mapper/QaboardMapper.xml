@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.won15367.reserve.dao.QaboardDao">
+
+	<insert id="qaCreateDao">
+		INSERT INTO hos_qaboard (qanum, qaid, qaname, qaquestion) VALUES (qa_seq.nextval, #{param1}, #{param2}, #{param3})
+	</insert>
+	
+	<select id="qaListDao" resultType="com.won15367.reserve.dto.QaboardDto">
+		SELECT * FROM hos_qaboard WHERE qaid=#{param1}
+	</select>
+	
+	<select id="qaViewDao" resultType="com.won15367.reserve.dto.QaboardDto">
+		SELECT * FROM hos_qaboard WHERE qanum=#{param1}
+	</select>
+
+	<select id="qaAllListDao" resultType="com.won15367.reserve.dto.QaboardDto">
+		SELECT * FROM hos_qaboard
+	</select>
+	
+	<update id="qaAnswerDao">
+		UPDATE hos_qaboard SET qaanswer=#{param2} WHERE qanum=#{param1}
+	</update>
+
+</mapper>
